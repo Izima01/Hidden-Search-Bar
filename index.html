@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hidden Search Bar</title>
+</head>
+<body>
+    <main class="search">
+        <input type="search" name="" id="searchBar">
+        <button type="button" id="btn">
+            <img src="./img/Search (1).svg" alt="">
+        </button>
+    </main>
+    <script>
+        let btn = document.querySelector("#btn");
+
+        btn.addEventListener('click', () => {
+            document.querySelector(".search").classList.toggle("active");
+        });
+
+    function titleCase(str) {
+        let arr = str.split(" ");
+        console.log(arr);
+        arr = arr.map(word => word.length > 1 ? word[0].toUpperCase().concat(word.slice(1)) : word);
+        console.log(arr);
+        console.log(arr.join(" "));
+        return arr.join("");
+    }
+    // arr.sort((a, b) => a !== b ? a < b ? -1 : 1 : 0);
+    titleCase("I'm a little tea pot");
+    </script>
+</body>
+</html>
